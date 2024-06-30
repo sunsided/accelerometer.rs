@@ -18,6 +18,9 @@ keywords    = ["acceleration", "position", "tracking"]
 [badges]
 maintenance = { status = "passively-maintained" }
 
+[dependencies]
+defmt = { version = "0.3.8", optional = true }
+
 [dependencies.micromath]
 version = "2"
 features = ["vector"]
@@ -25,3 +28,6 @@ features = ["vector"]
 [features]
 default = ["orientation"]
 orientation = []
+
+[package.metadata.docs.rs]
+rustdoc-args = ["--cfg", "docsrs"]
